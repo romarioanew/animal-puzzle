@@ -1,10 +1,10 @@
 const words = [
-    { word: "Γάτα", image: "cat.jpg", question: "cat_question.mp3", largeImage: "cat2.jpg", roar: "cat_roar.mp3" },
-    { word: "Σκύλος", image: "dog.jpg", question: "dog_question.mp3", largeImage: "dog2.jpg", roar: "dog_roar.mp3" },
-    { word: "Πουλί", image: "bird.jpg", question: "bird_question.mp3", largeImage: "bird2.jpg", roar: "bird_roar.mp3" },
-    { word: "Λιοντάρι", image: "lion.jpg", question: "lion_question.mp3", largeImage: "lion2.jpg", roar: "lion_roar.mp3" },
-    { word: "Πίθηκος", image: "monkey.jpg", question: "monkey_question.mp3", largeImage: "monkey2.jpg", roar: "monkey_roar.mp3" },
-    { word: "Χοίρος", image: "pig.jpg", question: "pig_question.mp3", largeImage: "pig2.jpg", roar: "pig_roar.mp3" },
+    { word: "Γάτα", image: "cat.jpg", question: "Πού είναι η γάτα;", largeImage: "cat2.jpg", roar: "cat_roar.mp3" },
+    { word: "Σκύλος", image: "dog.jpg", question: "Πού είναι ο σκύλος;", largeImage: "dog2.jpg", roar: "dog_roar.mp3" },
+    { word: "Πουλί", image: "bird.jpg", question: "Πού είναι το πουλί;", largeImage: "bird2.jpg", roar: "bird_roar.mp3" },
+    { word: "Λιοντάρι", image: "lion.jpg", question: "Πού είναι το λιοντάρι;", largeImage: "lion2.jpg", roar: "lion_roar.mp3" },
+    { word: "Πίθηκος", image: "monkey.jpg", question: "Πού είναι ο πίθηκος;", largeImage: "monkey2.jpg", roar: "monkey_roar.mp3" },
+    { word: "Χοίρος", image: "pig.jpg", question: "Πού είναι ο χοίρος;", largeImage: "pig2.jpg", roar: "pig_roar.mp3" },
 ];
 
 let targetAnimal = '';
@@ -65,9 +65,6 @@ function checkAnswer(selectedAnimal) {
     } else {
         const roarAudio = new Audio(selectedAnimal.roar); // Ήχος του λάθους ζώου
         roarAudio.play(); // Παίζει τον ήχο του λάθους
-        setTimeout(() => {
-            roarAudio.pause(); // Σταματάει μετά από 3 δευτερόλεπτα
-        }, 3000);
     }
 
     setTimeout(() => {
